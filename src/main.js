@@ -12,9 +12,10 @@ import 'floating-vue/dist/style.css' // Import FloatingVue CSS
 // Import FloatingVue plugin
 import FloatingVue from 'floating-vue'
 
-// Create an Axios instance (optional: configure with base URL, headers, etc.)
+// Create an Axios instance
 const axiosInstance = axios.create({
-  // baseURL: '/api', // Example: if your API is served from a subpath
+  baseURL: import.meta.env.PROD ? "https://alpha.cxai.com" : "http://localhost:7777",
+  withCredentials: false
   // timeout: 10000, // Example: 10 second timeout
   // headers: {'X-Custom-Header': 'foobar'}
 });
