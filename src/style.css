@@ -1,0 +1,104 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Using DM Sans as the primary font, Poppins for headings or specific elements if needed */
+  font-family: 'DM Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6; /* Adjusted for better readability */
+  font-weight: 400;
+
+  color-scheme: light; /* Defaulting to light scheme based on component design */
+  color: #343a40; /* Darker text color for light backgrounds */
+  background-color: #ffffff; /* Default white background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  /* display: flex; place-items: center; */ /* Removing flex centering for body, let components manage layout */
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 16px; /* Base font size */
+  background-color: var(--bs-body-bg, #fff); /* Ensure body background matches Bootstrap if used */
+}
+
+#app {
+  /* max-width: 1280px; */ /* Removing max-width from app container, let components define their own width */
+  margin: 0 auto;
+  /* padding: 2rem; */ /* Removing default padding */
+  /* text-align: center; */ /* Removing default text-align */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Headings using Poppins by default */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Example weight */
+  color: #333; /* Default heading color */
+}
+
+/* Basic styles for gradient classes used in NetworkTest.vue - these are placeholders */
+/* These should ideally come from a more comprehensive design system or Bootstrap theme */
+.bg-gradient-orange {
+  background: linear-gradient(to right, #ffaf7b, #ff8a00); /* Example orange gradient */
+  color: #fff; /* Assuming text on gradient is light */
+  padding-top: 2rem; /* Some default padding */
+  padding-bottom: 2rem; /* Some default padding */
+}
+
+.btn-gradient.gradient-7, .btn-gradient.gradient-6 {
+  color: white !important; /* Ensure text is white */
+  /* background-image: linear-gradient(to right, #f5515f, #a1051d); Example redish gradient */
+  background-image: linear-gradient(to right, #0d6efd, #0a58ca); /* Example blueish bootstrap-like gradient */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+.btn-gradient.gradient-7:hover, .btn-gradient.gradient-6:hover {
+  /* background-image: linear-gradient(to right, #a1051d, #f5515f); */
+  background-image: linear-gradient(to right, #0a58ca, #0d6efd);
+}
+
+
+/* Popover styles for floating-vue (default dark theme) */
+/* This ensures popovers are styled correctly and appear above other content */
+.v-popper--theme-dropdown .v-popper__inner,
+.v-popper--theme-tooltip .v-popper__inner {
+  background: #212529; /* Dark background, Bootstrap dark-like */
+  color: white;
+  border-radius: 0.3rem; /* Bootstrap-like border-radius */
+  padding: 0.5rem 1rem; /* Bootstrap-like padding */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Bootstrap-like shadow */
+  z-index: 1070; /* Ensure it's above most elements, Bootstrap popover z-index is 1070 */
+}
+
+.v-popper--theme-dropdown .v-popper__arrow-outer,
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+  border-color: #212529;
+}
+.v-popper--theme-dropdown .v-popper__arrow-inner,
+.v-popper--theme-tooltip .v-popper__arrow-inner {
+ border-color: #212529;
+}
+
+/* Ensure any direct .progressbar styling from NetworkTest.vue is respected or overridden here if needed */
+/* The .progressbar class in NetworkTest.vue might conflict or complement Bootstrap if added. */
+/* For now, the scoped style in NetworkTest.vue will handle its specific progress bar. */
+
+/* General link styling */
+a {
+  color: #0d6efd; /* Bootstrap default link color */
+  text-decoration: none; /* Bootstrap default */
+}
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
