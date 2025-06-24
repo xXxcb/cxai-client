@@ -1,5 +1,5 @@
 import ProgressBar from 'progressbar.js'; // Import progressbar.js
-import { Waypoint } from 'waypoints/lib/noframework.waypoints.js'; // Import Waypoint
+import { Waypoint } from 'waypoints/lib/noframework.waypoints.js'; // Corrected: Import Waypoint as a named export
 
 let modules = {};
 
